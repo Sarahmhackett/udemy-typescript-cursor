@@ -58,5 +58,52 @@ var mySong = {
     numPlays: 10000,
     duration: 18,
 };
-console.log(calcPay(mySong));
-console.log(printSong(mySong));
+var user = {
+    id: 10,
+    username: "Sarah",
+};
+var happyFace = {
+    radius: 4,
+    colour: "red",
+};
+var nemo = {
+    numLives: 1,
+    breed: "Blue Whale",
+    food: "Coral",
+};
+// EXERCISES
+// CREATE A  TYPE FOR MOVIE:
+var dune = {
+    title: "Dune",
+    originalTitle: "Dune Part One",
+    director: "Denis Villeneuve",
+    releaseYear: 2021,
+    boxOffice: {
+        budget: 108.4,
+        grossUS: 40.2,
+        grossWorldWide: 68.2,
+    },
+};
+var cats = {
+    title: "Cats",
+    director: "Tom Hooper",
+    releaseYear: 2019,
+    boxOffice: {
+        budget: 100.4,
+        grossUS: 50.2,
+        grossWorldWide: 65.2,
+    },
+};
+// write function that is get profit.
+// const getProfit = (movie: Movie): number => {
+//   const { budget, grossWorldWide, grossUS } = movie.boxOffice;
+//   return budget - (grossWorldWide + grossUS);
+// };
+// console.log(getProfit(dune));
+// console.log(getProfit(cats));
+var getProfit = function (_a) {
+    var _b = _a.boxOffice, grossWorldWide = _b.grossWorldWide, grossUS = _b.grossUS, budget = _b.budget;
+    return budget - (grossWorldWide + grossUS);
+};
+console.log(getProfit(dune));
+console.log(getProfit(cats));

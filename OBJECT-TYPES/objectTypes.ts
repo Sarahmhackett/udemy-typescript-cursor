@@ -85,7 +85,7 @@ type Song = {
   title: string;
   artist: string;
   numPlays: number;
-  duration: number;
+  duration?: number;
 };
 
 const mySong: Song = {
@@ -95,5 +95,113 @@ const mySong: Song = {
   duration: 18,
 };
 
-console.log(calcPay(mySong));
-console.log(printSong(mySong));
+// console.log(calcPay(mySong));
+// console.log(printSong(mySong));
+
+// Read Only Types - cannot be changed after being set
+
+type User = {
+  readonly id: number;
+  username: string;
+};
+
+const user: User = {
+  id: 10,
+  username: "Sarah",
+};
+
+// user.id = 20
+// user.username = "sarah two"
+
+// Intersection Types - combining two types
+
+type Circle = {
+  radius: number;
+};
+
+type Colourful = {
+  colour: string;
+};
+
+type ColourfulCircle = Circle & Colourful;
+
+const happyFace: ColourfulCircle = {
+  radius: 4,
+  colour: "red",
+};
+
+type Fish = {
+  numLives: number;
+};
+
+type Whale = {
+  breed: string;
+};
+
+type FishWhale = Whale &
+  Fish & {
+    food: string;
+  };
+
+const nemo: FishWhale = {
+  numLives: 1,
+  breed: "Blue Whale",
+  food: "Coral",
+};
+
+// EXERCISES
+
+// CREATE A  TYPE FOR MOVIE:
+const dune: Movie = {
+  title: "Dune",
+  originalTitle: "Dune Part One",
+  director: "Denis Villeneuve",
+  releaseYear: 2021,
+  boxOffice: {
+    budget: 108.4,
+    grossUS: 40.2,
+    grossWorldWide: 68.2,
+  },
+};
+
+const cats: Movie = {
+  title: "Cats",
+  director: "Tom Hooper",
+  releaseYear: 2019,
+  boxOffice: {
+    budget: 100.4,
+    grossUS: 50.2,
+    grossWorldWide: 65.2,
+  },
+};
+
+type Movie = {
+  readonly title: string;
+  originalTitle?: string;
+  director: string;
+  releaseYear: number;
+  boxOffice: {
+    budget: number;
+    grossUS: number;
+    grossWorldWide: number;
+  };
+};
+
+// write function that is get profit.
+
+// const getProfit = (movie: Movie): number => {
+//   const { budget, grossWorldWide, grossUS } = movie.boxOffice;
+//   return budget - (grossWorldWide + grossUS);
+// };
+
+// console.log(getProfit(dune));
+// console.log(getProfit(cats));
+
+const getProfit = ({
+  boxOffice: { grossWorldWide, grossUS, budget },
+}: Movie): number => {
+  return budget - (grossWorldWide + grossUS);
+};
+
+console.log(getProfit(dune));
+console.log(getProfit(cats));
