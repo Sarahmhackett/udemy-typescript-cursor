@@ -15,6 +15,7 @@ let tvShow = "The office";
 tvShow = "The office 2";
 
 // TYPE ANY
+let thing;
 let anything: any = "hello";
 anything = 10;
 anything = true;
