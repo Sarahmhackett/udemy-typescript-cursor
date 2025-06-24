@@ -62,4 +62,4 @@ const products: Product[] = [
   { name: "cherry", price: 2.99 },
 ];
 
-console.log(getTotal(products));
+// console.log(getTotal(products));

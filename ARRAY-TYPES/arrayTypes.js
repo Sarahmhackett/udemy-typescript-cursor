@@ -37,4 +37,4 @@ var products = [
     { name: "banana", price: 0.99 },
     { name: "cherry", price: 2.99 },
 ];
-console.log(getTotal(products));
+// console.log(getTotal(products));
