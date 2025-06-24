@@ -1,30 +1,31 @@
+"use strict";
 // Interfaces are a way to define the shape of an object and only objects
-var me = {
+const me = {
     name: "Sarah",
     age: 37,
 };
-var them = {
+const them = {
     name: "Sarah",
     age: 37,
-    sayHello: function () { return "Hello"; },
-    sayGoodbye: function () { return "Goodbye"; },
+    sayHello: () => "Hello",
+    sayGoodbye: () => "Goodbye",
 };
-var shoes = {
+const shoes = {
     name: "Nike",
     price: 100,
-    applyDiscount: function (discount) {
-        var newPrice = this.price * (1 - discount);
+    applyDiscount(discount) {
+        const newPrice = this.price * (1 - discount);
         this.price = newPrice;
         return newPrice;
     },
 };
-var ratty = {
+const ratty = {
     name: "Patty the Ratty",
     age: 0.5,
     food: "cheese",
 };
 // Can extend multiple interfaces
-var mutant = {
+const mutant = {
     name: "Patty the Mutant",
     age: 0.5,
     food: "cheese",

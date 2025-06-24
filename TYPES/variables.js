@@ -1,18 +1,19 @@
+"use strict";
 // BASICS -- PRIMITIVE TYPES
 // STRINGS
-var movieTitle = "The matrix";
+let movieTitle = "The matrix";
 movieTitle = "The matrix 2";
 movieTitle.toUpperCase();
 // NUMBERS
-var myNum = 10;
-var myBoolean = true;
+let myNum = 10;
+let myBoolean = true;
 myBoolean = false;
 // TYPE INFERENCE
-var tvShow = "The office";
+let tvShow = "The office";
 tvShow = "The office 2";
 // TYPE ANY
-var thing;
-var anything = "hello";
+let thing;
+let anything = "hello";
 anything = 10;
 anything = true;
 // extra checks are gone

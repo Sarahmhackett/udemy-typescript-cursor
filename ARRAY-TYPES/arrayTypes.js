@@ -1,38 +1,38 @@
+"use strict";
 // Arrays
-var currentDogs = ["Homer", "Pablo", "Hugo"];
-var currentCats = [];
+const currentDogs = ["Homer", "Pablo", "Hugo"];
+let currentCats = [];
 currentCats.push("Mittens");
-var ageList = [65, 12, 14, 16];
+let ageList = [65, 12, 14, 16];
 ageList[0] = 55;
 // Array types alternative
-var previousDogs = ["Homer", "Pablo", "Hugo"];
-var ageDocs = [65, 12, 14, 16];
-var myCoords = [];
+let previousDogs = ["Homer", "Pablo", "Hugo"];
+const ageDocs = [65, 12, 14, 16];
+const myCoords = [];
 myCoords.push({ x: 10, y: 20 });
 // 2D Array of Strings
-var board = [
+const board = [
     ["X", "O", "X"],
     ["X", "O", "X"],
     ["X", "O", "X"],
     ["X", "O", "X"],
 ];
 // EXERCISES - Create an empty array of Numbers called Ages
-var ages = [];
+const ages = [];
 // Create an array variable called gameBoard that starts as an emty array. Typed to hold a 2 d arraoy of strings
-var gameBoard = [
+const gameBoard = [
     ["string", "string"],
     ["string", "string"],
 ];
 // write a function called getTotal that accepts an array of product types. It should return a sum of all of the prices
-var getTotal = function (products) {
-    var total = 0;
-    for (var _i = 0, products_1 = products; _i < products_1.length; _i++) {
-        var product = products_1[_i];
+const getTotal = (products) => {
+    let total = 0;
+    for (let product of products) {
         total += product.price;
     }
     return total;
 };
-var products = [
+const products = [
     { name: "apple", price: 1.99 },
     { name: "banana", price: 0.99 },
     { name: "cherry", price: 2.99 },

@@ -1,6 +1,7 @@
+"use strict";
 // FUNCTIONS
 function greet(person) {
-    return "Hello ".concat(person);
+    return `Hello ${person}`;
 }
 greet("John");
 function square(num) {
@@ -8,15 +9,14 @@ function square(num) {
 }
 square(2);
 // Multiple parameters
-var doSomething = function (person, age, isFunny) {
+const doSomething = (person, age, isFunny) => {
     return "Hi ${person}";
 };
 doSomething("John", 20, true);
 // doSomething(50, 20, true);
 // Default parameters
-function greetingDefault(person) {
-    if (person === void 0) { person = "Sarah"; }
-    return "Hello ".concat(person);
+function greetingDefault(person = "Sarah") {
+    return `Hello ${person}`;
 }
 greet("John");
 // Return types - obvious what function returns
@@ -33,14 +33,14 @@ function random(num) {
     }
 }
 // Return type inference
-var colors = ["red", "orange", "yellow"];
-colors.map(function (color) {
+const colors = ["red", "orange", "yellow"];
+colors.map((color) => {
     return color.toUpperCase();
 });
 // Voice types - void means no return
 function printTwice(msg) {
-    console.log(msg);
-    console.log(msg);
+    //   console.log(msg);
+    //   console.log(msg);
 }
 printTwice("Hello");
 // Never type - function that never returns - this should never have a chance to return anything
@@ -51,16 +51,15 @@ printTwice("Hello");
 // makeError("Error");
 // EXERCISES:
 //  1: wrte a function twoFer that accepts a person's name as an argument and returns a string "One for {name}, one for me". If there's no name default to 'you'
-var twoFer = function (person) {
-    if (person === void 0) { person = "you"; }
-    return "One for ".concat(person, ", one for me");
+const twoFer = (person = "you") => {
+    return `One for ${person}, one for me`;
 };
 twoFer("John");
-console.log(twoFer("John"));
-console.log(twoFer());
+// console.log(twoFer("John"));
+// console.log(twoFer());
 // 2: write a isLeapYear function that accepts a year and returns true or false if it is a leap year
-var isLeapYear = function (year) {
+const isLeapYear = (year) => {
     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 };
-console.log(isLeapYear(2020));
-console.log(isLeapYear(2021));
+// console.log(isLeapYear(2020));
+// console.log(isLeapYear(2021));

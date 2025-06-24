@@ -1,42 +1,43 @@
-var dogs = {
+"use strict";
+const dogs = {
     name: "Homer",
     breed: "Golden",
     age: 1,
     favFood: "Purina",
 };
 function printDogs(dogs) {
-    return "Name: ".concat(dogs.name, ", Breed: ").concat(dogs.breed, ", Age: ").concat(dogs.age);
+    return `Name: ${dogs.name}, Breed: ${dogs.breed}, Age: ${dogs.age}`;
 }
 // Object literals must contain only the properties defined in the type
 // console.log(printDogs({ name: "Homer", breed: "Golden", age: 1 }));
 // Object can contain more properties than the ones defined in the type
 // console.log(printDogs(dogs));
 // This is the pattern it should follow, then you make it follow the pattern
-var coords = {
+let coords = {
     x: 10,
     y: 10,
 };
 function randomCoord() {
     return { x: Math.random(), y: Math.random() };
 }
-var homerDog = {
+const homerDog = {
     name: "Homer",
     breed: "Golden",
     age: 1,
     favFood: "Purina",
 };
-var pabloDog = {
+const pabloDog = {
     name: "Pablo",
     breed: "lab",
     age: 1,
     favFood: "Purina",
 };
 function printDog(dog) {
-    return "Name: ".concat(dog.name, ", Breed: ").concat(dog.breed, ", Age: ").concat(dog.age, ", Favorite Food: ").concat(dog.favFood);
+    return `Name: ${dog.name}, Breed: ${dog.breed}, Age: ${dog.age}, Favorite Food: ${dog.favFood}`;
 }
 // Nested Object type annotations
-var describeCat = function (cat) {
-    return "Name: ".concat(cat.name, ", Age: ").concat(cat.age, ", Owner Names: ").concat(cat.ownerNames.mum, " and ").concat(cat.ownerNames.dad);
+const describeCat = (cat) => {
+    return `Name: ${cat.name}, Age: ${cat.age}, Owner Names: ${cat.ownerNames.mum} and ${cat.ownerNames.dad}`;
 };
 describeCat({
     name: "Cat",
@@ -50,30 +51,30 @@ function calcPay(song) {
     return song.numPlays * 0.033;
 }
 function printSong(song) {
-    return "Title: ".concat(song.title, ", Artist: ").concat(song.artist);
+    return `Title: ${song.title}, Artist: ${song.artist}`;
 }
-var mySong = {
+const mySong = {
     title: "Unchained Melody",
     artist: "Righteous Brothers",
     numPlays: 10000,
     duration: 18,
 };
-var user = {
+const user = {
     id: 10,
     username: "Sarah",
 };
-var happyFace = {
+const happyFace = {
     radius: 4,
     colour: "red",
 };
-var nemo = {
+const nemo = {
     numLives: 1,
     breed: "Blue Whale",
     food: "Coral",
 };
 // EXERCISES
 // CREATE A  TYPE FOR MOVIE:
-var dune = {
+const dune = {
     title: "Dune",
     originalTitle: "Dune Part One",
     director: "Denis Villeneuve",
@@ -84,7 +85,7 @@ var dune = {
         grossWorldWide: 68.2,
     },
 };
-var cats = {
+const cats = {
     title: "Cats",
     director: "Tom Hooper",
     releaseYear: 2019,
@@ -101,8 +102,7 @@ var cats = {
 // };
 // console.log(getProfit(dune));
 // console.log(getProfit(cats));
-var getProfit = function (_a) {
-    var _b = _a.boxOffice, grossWorldWide = _b.grossWorldWide, grossUS = _b.grossUS, budget = _b.budget;
+const getProfit = ({ boxOffice: { grossWorldWide, grossUS, budget }, }) => {
     return budget - (grossWorldWide + grossUS);
 };
 console.log(getProfit(dune));
