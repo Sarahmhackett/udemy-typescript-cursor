@@ -1,0 +1,24 @@
+{
+  "name": "udemy-typescript-cursor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sarahmhackett/udemy-typescript-cursor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sarahmhackett/udemy-typescript-cursor/issues"
+  },
+  "homepage": "https://github.com/Sarahmhackett/udemy-typescript-cursor#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
