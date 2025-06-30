@@ -52,7 +52,7 @@ function merge<T, U>(object1: T, object2: U) {
   };
 }
 
-const merged = merge({ name: "Sarah" }, { age: 37 });
+const mergedThings = merge({ name: "Sarah" }, { age: 37 });
 
 function mergedObjects<T extends object, U extends object>(
   object1: T,
