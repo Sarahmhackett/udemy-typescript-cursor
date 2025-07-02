@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/Sarahmhackett/udemy-typescript-cursor#readme",
   "dependencies": {
-    "lite-server": "^2.6.1"
+    "axios": "^1.10.0",
+    "lite-server": "^2.6.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.20"
   }
 }
